@@ -43,7 +43,8 @@ def work_num_processes(num_processes, obj):
 
 def get_time_pr(num_processes, obj):
     start = time()
-    print(work_num_processes(num_processes, obj))
+    print(work_num_processes(num_processes, obj), end="")
+    print(" Колличество процессов: ", num_processes)
     end = time()
     return end - start
 
@@ -85,8 +86,8 @@ if __name__ == '__main__':
     plt.title('График времени поиска')
     plt.ylabel('Затраченное время')
     plt.xlabel('Количество задействованных процессов')
+    plt.savefig("My_Chart.png")
     plt.show()
-
 
 """
     start = time()
